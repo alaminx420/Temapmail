@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temapmail - Free Temp Email</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    .inbox {
+      margin-top: 30px;
+      text-align: left;
+    }
+    .ad {
+      margin: 20px 0;
+      height: 100px;
+      background: #e0e0e0;
+      line-height: 100px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📨 Welcome to Temapmail</h1>
+    <p>Your temporary email address:</p>
+    <input type="text" id="email" value="random123@tempmail.com" readonly />
+    <button onclick="copyEmail()">Copy</button>
+
+    <div class="ad">🔸 AdSense Ad Area 🔸</div>
+
+    <div class="inbox">
+      <h3>📥 Inbox</h3>
+      <p>(No messages yet)</p>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email");
+      email.select();
+      email.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Email copied: " + email.value);
+    }
+  </script>
+</body>
+</html>
